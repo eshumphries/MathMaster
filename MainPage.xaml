@@ -7,6 +7,49 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <ScrollViewer>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel>
+                <TextBlock/>
+            </StackPanel>
+            <StackPanel>
+                <Canvas>
+
+                </Canvas>
+            </StackPanel>
+            <StackPanel>
+                <Button>
+                    <Button.Content>
+                        <Canvas>
+                            <TextBlock/>
+                            <TextBlock/>
+                            <TextBlock/>
+                        </Canvas>
+                    </Button.Content>
+                </Button>
+                <Button>
+                    <Button.Content>
+                        <Canvas>
+                            <TextBlock/>
+                            <TextBlock/>
+                            <TextBlock/>
+                        </Canvas>
+                    </Button.Content>
+                </Button>
+                <Button>
+                    <Button.Content>
+                        <Canvas>
+                            <TextBlock/>
+                            <TextBlock/>
+                            <TextBlock/>
+                        </Canvas>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+        </Grid>
     </ScrollViewer>
 </Page>
