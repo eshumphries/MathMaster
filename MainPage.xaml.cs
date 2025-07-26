@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 
 namespace MathMaster
 {
@@ -11,9 +12,18 @@ namespace MathMaster
     {
         public MainPage()
         {
-            this.InitializeComponent();
+            DisplayScrollViewer.SizeChanged += DisplayScrollViewer_SizeChanged;
+            InitializeComponent();
+        }
 
-            // Enter construction logic here...
+        private void DisplayScrollViewer_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            double scale = Math.Min(e.NewSize.Width / 800, e.NewSize.Height / 600);
+            DisplayGrid.RenderTransform = new ScaleTransform
+            {
+                ScaleX = scale * 1.8,
+                ScaleY = scale * 1.8
+            };
         }
     }
 }
